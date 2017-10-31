@@ -15,8 +15,6 @@ module ProxyProtocol
 
     def initialize
       @complete          = false
-      @buf               = String.new('', capacity: HEADER_SIZE+216) # header size + max proxy_addr size
-      @tlv_buf           = ''
       @proxy_data        = ProxyData.new
       @header_parsed     = false
       @proxy_addr_parsed = false
